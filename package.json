@@ -1,0 +1,14 @@
+{
+  "name": "qonnections-d3-presentation",
+  "version": "1.0.0",
+  "description": "Presentation files for Qonnections 2017",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mcgovey",
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^3.4.1"
+  }
+}
