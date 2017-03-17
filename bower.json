@@ -1,0 +1,17 @@
+{
+  "name": "qonnections-d3-presentation",
+  "description": "Presentation files for Qonnections 2017",
+  "main": "index.html",
+  "authors": [
+    "mcgovey"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mcgovey/qonnections-2017-d3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
