@@ -39,7 +39,6 @@
                             <li class="fragment">Data Visualization Consultant at Slalom</li>
                             <li class="fragment">Qlik Branch Contributor</li>
                             <li class="fragment">Builds things with D3</li>
-                            <li class="fragment">...nerd...</li>
                         </ul>
                     </section>
                 </section>
@@ -120,6 +119,122 @@
 				<section>
 					<section>
 						<h3>D3 in Action</h3>
+						<h5>Finding elements, binding data, creating new elements</h5>
+						<a href="http://alignedleft.com/tutorials/d3/binding-data">Using Scott Murray's Awesome Tutorial</a>
+					</section>
+					<section>
+						<h3>An Example</h3>
+						<pre><code data-trim data-noescape>
+							var dataset = [ 5, 10, 15, 20, 25 ];
+
+							d3.select("body")
+								.selectAll("p")
+								.data(dataset)
+								.enter()
+								.append("p")
+								.text("New paragraph!");
+						</code></pre>
+					</section>
+					<section>
+						<h3>An Example</h3>
+						<pre><code data-trim data-noescape>
+							<mark>var dataset = [ 5, 10, 15, 20, 25 ];</mark>
+
+							d3.select("body")
+								.selectAll("p")
+								.data(dataset)
+								.enter()
+								.append("p")
+								.text("New paragraph!");
+						</code></pre>
+					</section>
+					<section>
+						<h3>An Example</h3>
+						<pre><code data-trim data-noescape>
+							var dataset = [ 5, 10, 15, 20, 25 ];
+
+							<mark>d3.select("body")
+								.selectAll("p")</mark>
+								.data(dataset)
+								.enter()
+								.append("p")
+								.text("New paragraph!");
+						</code></pre>
+					</section>
+					<section>
+						<h3>An Example</h3>
+						<pre><code data-trim data-noescape>
+							var dataset = [ 5, 10, 15, 20, 25 ];
+
+							d3.select("body")
+								.selectAll("p")
+							<mark>	.data(dataset)</mark>
+								.enter()
+								.append("p")
+								.text("New paragraph!");
+						</code></pre>
+					</section>
+					<section>
+						<h3>An Example</h3>
+						<pre><code data-trim data-noescape>
+							var dataset = [ 5, 10, 15, 20, 25 ];
+
+							d3.select("body")
+								.selectAll("p")
+								.data(dataset)
+							<mark>	.enter()</mark>
+								.append("p")
+								.text("New paragraph!");
+						</code></pre>
+					</section>
+					<section>
+						<h3>An Example</h3>
+						<pre><code data-trim data-noescape>
+							var dataset = [ 5, 10, 15, 20, 25 ];
+
+							d3.select("body")
+								.selectAll("p")
+								.data(dataset)
+								.enter()
+							<mark>	.append("p")</mark>
+								.text("New paragraph!");
+						</code></pre>
+					</section>
+					<section>
+						<h3>An Example</h3>
+						<pre><code data-trim data-noescape>
+							var dataset = [ 5, 10, 15, 20, 25 ];
+
+							d3.select("body")
+								.selectAll("p")
+								.data(dataset)
+								.enter()
+								.append("p")
+							<mark>	.text("New paragraph!");</mark>
+						</code></pre>
+					</section>
+					<section>
+						<h3>An Example - Results</h3>
+						<img data-src="img/example_output.png">
+						<pre class="fragment"><code>console.log(d3.selectAll("p"))</code></pre>
+					</section>
+					<section>
+						<h3>An Example - Exploring the Elements</h3>
+						<img data-src="img/example_console_output.png">
+						<img class="fragment" data-src="img/example_console_output2.png">
+					</section>
+					<section>
+						<h3>Modified Example - Using Data to Add to Elements</h3>
+						<pre><code data-trim data-noescape>
+							var dataset = [ 5, 10, 15, 20, 25 ];
+
+							d3.select("body")
+								.selectAll("p")
+								.data(dataset)
+								.enter()
+								.append("p")
+							<mark>	.text(function(d) { return d; });</mark>
+						</code></pre>
 					</section>
 				</section>
 				<section>
