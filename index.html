@@ -62,7 +62,17 @@
                 	<section>
                 		<h3>What D3 isn't</h3>
                 		<ul>
-                			<li class="fragment"></li>
+                			<li class="fragment">Not a charting library</li>
+                			<li class="fragment">Not a drawing library</li>
+                			<li class="fragment">Not optimized for canvas and WebGL</li>
+                			<li class="fragment">Not a framework</li>
+
+							<aside class="notes">
+								Charting - nvd3, c3, highcharts
+								Manipulates objects within SVG - is not actually responsible for drawing different object types - uses rect, circle, etc
+								Don't know what that is - don't worry about it, just know best used for SVG
+								Works well with other frameworks
+							</aside>
                 		</ul>
                 	</section>
                 	<section>
@@ -294,18 +304,34 @@
 						<img data-src="img/d3-stream.png">
 					</section>
 					<section>
-						<h3>Why D3 over a charting library?</h3>
-<h5>Needs Content</h5>
+						<h3>But why?</h3>
+						<ul>
+							<li class="fragment">Data changes over time</li>
+							<li class="fragment">User interactions</li>
+							<ul class="fragment">
+								<li>Clicks</li>
+								<li>Hover</li>
+								<li>Time-based delays</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>D3 looks hard, what about charting libraries?</h3>
+						<ul>
+							<li class="fragment">Few chart options</li>
+							<li class="fragment">Customization is difficult</li>
+							<li class="fragment">Limited page interaction</li>
+						</ul>
 					</section>
 					<section>
 						<h3>D3 is more than a way to just change data on the page dynamically</h3>
 						<ul>
-							<li>Visualize hierarchical data</li>
-							<li>Visualize relationship-base data</li>
-							<li>Leverage open source geo libraries</li>
-							<li>Make super slick transitions</li>
-							<li>Create interactive charts</li>
-							<li>Integrate with the newest JS standards and libraries</li>
+							<li class="fragment">Create interactive charts</li>
+							<li class="fragment">Visualize hierarchical data</li>
+							<li class="fragment">Leverage open source geo libraries</li>
+							<li class="fragment">Make super slick transitions</li>
+							<li class="fragment">Visualize relationship-base data</li>
+							<li class="fragment">Integrate with the newest JS standards and libraries</li>
 						</ul>
 					</section>
 
@@ -313,68 +339,156 @@
 				<section>
 					<section>
 						<h3>Benefits of Using D3 with Qlik Sense</h3>
-<h5>Needs Content</h5>
+						<h5>Specifically how does D3 integrate with Qlik Sense</h5>
 					</section>
 
 					<section>
-<h5>Needs Content</h5>
-<h2>Talk about building mashups and using things build into page - also about extending OOB QS charts</h2>
+						<h3>A couple different reasons</h3>
+						<span class="fragment">
+							<h5>Mashups</h5>
+							<ul>
+								<li>Blend styles with the rest of your page</li>
+								<li>Stand on the shoulders of other developers</li>
+							</ul>
+						</span>
+						<span class="fragment">
+							<h5>Extensions</h5>
+							<ul>
+								<li>Extend the capabilities of Qlik Sense</li>
+								<li>Get an appreciation for bar charts</li>
+							</ul>
+						</span>
 					</section>
 					<section>
-<h5>Needs Content</h5>
-<h2>QS gives a lot of meta data along with data</h2>
+						<h3>Ok Qlik Sense needs D3 but why does D3 benefit from Qlik Sense?</h3>
+						<ul>
+							<li class="fragment">Meta data
+							<ul>
+								<li class="fragment">Min and Max</li>
+								<li class="fragment">Aggregations in D3 are a pain</li>
+								<li class="fragment">Min and Max</li>
+							</ul>
+							</li>
+						</ul>
+						<h5><a href="">Branch blog post</a></h5>
+<h5>Needs meta data examples</h5>
 					</section>
 
 					<section>
 						<h3>D3 in the wild</h3>
-<h5>Needs Content</h5>
+<h5>Needs Where the wild things Image</h5>
 					</section>
 					<section>
-						<h3>The most basic</h3>
+						<h3>The most basic
+							<a href="https://bl.ocks.org/mbostock/3885304">(source)</a>
+						</h3>
 						<img data-src="img/d3-bar.png">
-						<a href="https://bl.ocks.org/mbostock/3885304">source</a>
 					</section>
 					<section>
-						<h3>Maps</h3>
+						<h3>Maps
+							<a href="https://bl.ocks.org/mbostock/4060606">(source)</a>
+						</h3>
 						<img data-src="img/d3-map.png">
-						<a href="https://bl.ocks.org/mbostock/4060606">source</a>
 					</section>
 					<section>
-						<h3>Chords</h3>
+						<h3>Chords
+							<a href="https://bl.ocks.org/mbostock/4062006">(source)</a>
+						</h3>
 						<img data-src="img/d3-chord.png">
-						<a href="https://bl.ocks.org/mbostock/4062006">source</a>
 					</section>
 					<section>
-						<h3>Bubble</h3>
+						<h3>Bubble
+							<a href="https://bl.ocks.org/mbostock/4063269">(source)</a>
+						</h3>
 						<img data-src="img/d3-bubble.png">
-						<a href="https://bl.ocks.org/mbostock/4063269">source</a>
 					</section>
 					<section>
-						<h3>Stream</h3>
+						<h3>Stream
+							<a href="https://bl.ocks.org/mbostock/4060954">(source)</a>
+						</h3>
 						<img data-src="img/d3-stream.png">
-						<a href="https://bl.ocks.org/mbostock/4060954">source</a>
 					</section>
 					<section>
-						<h3>Network</h3>
+						<h3>Network
+							<a href="https://bl.ocks.org/mbostock/4062045">(source)</a>
+						</h3>
 						<img data-src="img/d3-network.png">
-						<a href="https://bl.ocks.org/mbostock/4062045">source</a>
 					</section>
 					<section>
-						<h3>Great D3 examples but how would I use that?</h3>
-<h5>Needs Content</h5>
+						<h3>Sweet examples but how would I use that?</h3>
+<h5>Needs Patience Image</h5>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h3>Using D3 in Mashups</h3>
-<h5>Needs Content</h5>
-<h3>When
+						<h5>or how to use the capabilities APIs with D3.js</h5>
+<h5>Needs lets rock image</h5>
+					</section>
+					<section>
+						<h3>Create a new mashup</h3>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Connect to a Qlik Sense app</h3>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Create a hypercube</h3>
+<h5>Needs wtf image</h5>
+					</section>
+					<section>
+						<h3>I said....create a hypercube</h3>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>What did you do!?!</h3>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Console out the return value</h3>
+<h5>Needs ss</h5>
+					</section>
+
+					<section>
+						<h3>Go grab a D3 example</h3>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Insert into the script</h3>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Optional: make sure example works first</h3>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Hook up your data to your hypercube</h3>
+						<h5>But first prep data</h5>
+<h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Connect to a Qlik Sense app</h3>
+<h5>Needs ss</h5>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h3>Using D3 in Extensions</h3>
-<h5>Needs Content</h5>
+						<h5>Mostly the same as mashups, a few differences</h5>
+						<ul>
+							<li class="fragment">No hypercube creation, controlled by properties</li>
+							<li class="fragment">A ton more error handling and data validation</li>
+							<li class="fragment">Handle data changes in a different way</li>
+						</ul>
+					</section>
+					<section>
+						<h3>How does our data look different</h3>
+<h5>Needs ss of paint return values</h5>
+					</section>
+					<section>
+						<h3>How does our data look different</h3>
+<h5>Needs ss of paint return values</h5>
 					</section>
 				</section>
 				<section>
