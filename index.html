@@ -549,22 +549,22 @@
 					<section>
 						<h3>Modified Example - Changing the Data</h3>
 						<pre><code data-trim data-noescape>
-	function getStateData(reply, app){
-	  <span class="fragment">//remove all d3 elements from svg
-	  <mark>$('#QV01 svg').empty();</mark></span>
-	  <span class="fragment">//store cleansed data
-	  <mark>var data = senseD3.createJSONObj(reply);</mark></span>
-	<span class="fragment">...
-	  g.selectAll(".bar")
-	  .data(data)
-	  .enter().append("rect")
-	    .attr("class", "bar")
-	    <span class="fragment">.attr("x", function(d) { return x(<mark>d.dim_0</mark>); })</span>
-	    <span class="fragment">.attr("y", function(d) { return y(<mark>d.meas_0</mark>); })</span>
-	    .attr("width", x.bandwidth())
-	    .attr("height", function(d) { return height - y(d.meas_0); });
-	 </span>
-	}
+							function getStateData(reply, app){
+							  <span class="fragment">//remove all d3 elements from svg
+							  <mark>$('#QV01 svg').empty();</mark></span>
+							  <span class="fragment">//store cleansed data
+							  <mark>var data = senseD3.createJSONObj(reply);</mark></span>
+							<span class="fragment">...
+							  g.selectAll(".bar")
+							  .data(data)
+							  .enter().append("rect")
+							    .attr("class", "bar")
+							    <span class="fragment">.attr("x", function(d) { return x(<mark>d.dim_0</mark>); })</span>
+							    <span class="fragment">.attr("y", function(d) { return y(<mark>d.meas_0</mark>); })</span>
+							    .attr("width", x.bandwidth())
+							    .attr("height", function(d) { return height - y(d.meas_0); });
+							 </span>
+							}
 						</code></pre>
 					</section>
 					<section data-background-image="img/mashup-ss/parksandrec.gif">
@@ -578,24 +578,32 @@
 					<section>
 						<h3>We're done right? Right!?</h3>
 						<h5><a href="https://github.com/mcgovey/qonnections-2017-d3/tree/aeddcc3010c4ec7a6846f2d90e5195ce7d259bab/mashup-example/my-d3-mashup">Link to source</a></h5>
-<h5>Uhh no image</h5>
 					</section>
 					<section>
-						<h3>What's wrong?</h3>
-						<h6 class="fragment">What if our data changes?</h6>
-
-<h5>Needs ss</h5>
-					</section>
-					<section>
-						<h4></h4>
-					</section>
-					<section>
-						<h4>Some other things we would want to handle</h4>
+						<h3>Well kinda</h3>
+						<h5>Some other things we would want to handle</h5>
 						<ul>
 							<li class="fragment">Window size changes</li>
 							<li class="fragment">Smoothing data changes</li>
-							<li class="fragment">Selections in the chart</li>
-							<li class="fragment">Hard coded D3 selection refs</li>
+							<li class="fragment">Fix hard coded D3 references</li>
+							<li class="fragment">Add selections in the chart</li>
+							<li class="fragment">Add hovers on the bars</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Selections (using the capability apis)</h3>
+						<pre><code data-trim data-noescape>
+							.on("click", function(d) {
+								app.field('addr_state').select([d.dim_0_id], true, true);
+							});
+						</code></pre>
+						<h6><a href="http://help.qlik.com/en-US/sense-developer/3.2/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm">Documentation</a></h6>
+					</section>
+					<section>
+						<h3>Capabilities API</h3>
+						<h6>What else can we do?</h6>
+						<ul>
+							<li></li>
 						</ul>
 					</section>
 					<section>
