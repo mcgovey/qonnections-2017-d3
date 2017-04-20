@@ -533,25 +533,51 @@
 					</section>
 					<section>
 						<h3>Get data from your hypercube</h3>
-						<h5>But first prep data</h5>
+						<h6>But first prep data (<a href="https://github.com/mcgovey/QlikSenseD3Utils">source</a>)</h6>
 <h5>Needs ss</h5>
 					</section>
 					<section>
-						<h3>Replace external data file references from D3</h3>
+						<h3>Minor edits</h3>
+						<ul>
+							<li>Put the D3 code inside the callback function</li>
+							<li>Clear the SVG before writing to it</li>
+							<li>Comment out the call to the tsv</li>
+							<li>Point the chart data to the hypercube variable</li>
+						</ul>
 <h5>Needs ss</h5>
 					</section>
 					<section>
+						<h3>Modified Example - Changing the Data</h3>
+						<pre><code data-trim data-noescape>
+	function getStateData(reply, app){
+	  <span class="fragment">//remove all d3 elements from svg
+	  <mark>$('#QV01 svg').empty();</mark></span>
+	  <span class="fragment">//store cleansed data
+	  <mark>var data = senseD3.createJSONObj(reply);</mark></span>
+	<span class="fragment">...
+	  g.selectAll(".bar")
+	  .data(data)
+	  .enter().append("rect")
+	    .attr("class", "bar")
+	    <span class="fragment">.attr("x", function(d) { return x(<mark>d.dim_0</mark>); })</span>
+	    <span class="fragment">.attr("y", function(d) { return y(<mark>d.meas_0</mark>); })</span>
+	    .attr("width", x.bandwidth())
+	    .attr("height", function(d) { return height - y(d.meas_0); });
+	 </span>
+	}
+						</code></pre>
+					</section>
+					<section data-background-image="img/mashup-ss/parksandrec.gif">
 						<h3>Refresh and....</h3>
-						<span class="fragment"><h3>boom</h3>
-<h5>Needs ss</h5>
-						</span>
+						<img class="fragment" data-src="img/mashup-ss/18workingHC.png">
 					</section>
 					<section>
-<h5>Perfecto image</h5>
+						<img data-src="img/mashup-ss/perfect.jpeg">
+
 					</section>
 					<section>
 						<h3>We're done right? Right!?</h3>
-
+						<h5><a href="https://github.com/mcgovey/qonnections-2017-d3/tree/aeddcc3010c4ec7a6846f2d90e5195ce7d259bab/mashup-example/my-d3-mashup">Link to source</a></h5>
 <h5>Uhh no image</h5>
 					</section>
 					<section>
@@ -567,6 +593,7 @@
 						<h4>Some other things we would want to handle</h4>
 						<ul>
 							<li class="fragment">Window size changes</li>
+							<li class="fragment">Smoothing data changes</li>
 							<li class="fragment">Selections in the chart</li>
 							<li class="fragment">Hard coded D3 selection refs</li>
 						</ul>
