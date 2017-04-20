@@ -7,7 +7,7 @@
 		<title>D3 and Qlik Sense</title>
 
 		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="bower_components/reveal.js//css/theme/moon.css">
+		<link rel="stylesheet" href="bower_components/reveal.js//css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
@@ -365,18 +365,23 @@
 							<li class="fragment">Meta data
 							<ul>
 								<li class="fragment">Min and Max</li>
+								<li class="fragment">Glyph counts</li>
 								<li class="fragment">Aggregations in D3 are a pain</li>
-								<li class="fragment">Min and Max</li>
+								<li class="fragment">Limits and methods on number of rows</li>
+								<li class="fragment">Sorting and formatting</li>
 							</ul>
 							</li>
 						</ul>
-						<h5><a href="">Branch blog post</a></h5>
-<h5>Needs meta data examples</h5>
+						<h5 class="fragment"><a href="https://branch-blog.qlik.com/qlik-d3-2d443ba602de">Branch blog post</a></h5>
+					</section>
+					<section>
+						<h3>Alright, let's integrate in Qlik Sense</h3>
+						<img class="fragment" data-src="img/patience.png">
 					</section>
 
 					<section>
 						<h3>D3 in the wild</h3>
-<h5>Needs Where the wild things Image</h5>
+						<img data-src="img/where-the-wild-things-are.jpg">
 					</section>
 					<section>
 						<h3>The most basic
@@ -414,62 +419,144 @@
 						</h3>
 						<img data-src="img/d3-network.png">
 					</section>
-					<section>
-						<h3>Sweet examples but how would I use that?</h3>
-<h5>Needs Patience Image</h5>
-					</section>
 				</section>
 				<section>
 					<section>
 						<h3>Using D3 in Mashups</h3>
 						<h5>or how to use the capabilities APIs with D3.js</h5>
-<h5>Needs lets rock image</h5>
+						<img class="fragment" data-src="img/animal.gif">
 					</section>
 					<section>
 						<h3>Create a new mashup</h3>
-<h5>Needs ss</h5>
+						<img data-src="img/mashup-ss/1create.png">
+					</section>
+					<section>
+						<h3>Create a new mashup</h3>
+						<img data-src="img/mashup-ss/2prompt.png">
 					</section>
 					<section>
 						<h3>Connect to a Qlik Sense app</h3>
-<h5>Needs ss</h5>
+						<img data-src="img/mashup-ss/3connect.png">
 					</section>
 					<section>
-						<h3>Create a hypercube</h3>
-<h5>Needs wtf image</h5>
+						<h3>Add a hypercube</h3>
+						<img data-src="img/mashup-ss/wut.png">
 					</section>
 					<section>
-						<h3>I said....create a hypercube</h3>
-<h5>Needs ss</h5>
+						<h3>What in tarnation is a hypercube</h3>
+						<ul>
+							<li class="fragment">Define dimensions and measures</li>
+							<li class="fragment">Tell Qlik the max number of rows expected</li>
+							<li class="fragment">Create a callback function to handle the data returned</li>
+							<li class="fragment">User selects data, callback function is called again</li>
+						</ul>
+					</section>
+					<section>
+						<h3>So about that hypercube....</h3>
+						<img data-src="img/mashup-ss/4addHypercube.png">
+					</section>
+					<section>
+						<h3>Configuring the hypercube</h3>
+						<img data-src="img/mashup-ss/5configureHypercube.png">
 					</section>
 					<section>
 						<h3>What did you do!?!</h3>
-<h5>Needs ss</h5>
+						<video data-autoplay data-src="img/mashup-ss/tommyBoy.mp4"></video>
 					</section>
 					<section>
-						<h3>Console out the return value</h3>
-<h5>Needs ss</h5>
+						<h3>What did we create?</h3>
+						<img data-src="img/mashup-ss/6hypercubeConfig.png">
+					</section>
+					<section>
+						<h3>Let's see the return values</h3>
+						<img data-src="img/mashup-ss/7consoleResponse.png">
 					</section>
 
 					<section>
-						<h3>Go grab a D3 example</h3>
-<h5>Needs ss</h5>
+						<h3>The developer panel</h3>
+						<img data-src="img/mashup-ss/8hcResponse.png">
+					</section>
+
+					<section>
+						<h3>Let's see the developer panel</h3>
+<h5>Needs now were in business img</h5>
+						<img data-src="img/mashup-ss/8hcResponse.png">
+					</section>
+
+					<section>
+						<h3>Go grab an example (<a href="https://bl.ocks.org/mbostock/3885304">source</a>)</h3>
+						<img data-src="img/mashup-ss/9blocksBar.png">
+						
 					</section>
 					<section>
-						<h3>Insert into the script</h3>
-<h5>Needs ss</h5>
+						<h3>Insert css into script</h3>
+						<img data-src="img/mashup-ss/10stylesCss.png">
 					</section>
 					<section>
-						<h3>Optional: make sure example works first</h3>
-<h5>Needs ss</h5>
+						<h3>Load D3 into our js</h3>
+						<img data-src="img/mashup-ss/11d3Load.png">
 					</section>
 					<section>
-						<h3>Hook up your data to your hypercube</h3>
+						<h3>Copy D3 code into script</h3>
+						<img data-src="img/mashup-ss/12d3Code.png">
+					</section>
+					<section>
+						<h3>Alter HTML</h3>
+						<img data-src="img/mashup-ss/13HtmlAlter.png">
+					</section>
+					<section>
+						<h3>Make sure it works</h3>
+						<img data-src="img/mashup-ss/14tsvCreated.png">
+						<h6>Drop the data file in the directory</h6>
+					</section>
+
+					<section>
+						<h3>Make sure it works</h3>
+						<img data-src="img/mashup-ss/15loadRequire.png">
+						<h6>Load an instance of require.js</h6>
+					</section>
+					<section>
+						<h3>Make sure it works</h3>
+						<img data-src="img/mashup-ss/16loadFile.png">
+						<h6>Reference the tsv file in js</h6>
+					</section>
+					<section>
+						<h3>Get data from your hypercube</h3>
 						<h5>But first prep data</h5>
 <h5>Needs ss</h5>
 					</section>
 					<section>
-						<h3>Connect to a Qlik Sense app</h3>
+						<h3>Replace external data file references from D3</h3>
 <h5>Needs ss</h5>
+					</section>
+					<section>
+						<h3>Refresh and....</h3>
+						<span class="fragment"><h3>boom</h3>
+<h5>Needs ss</h5>
+						</span>
+					</section>
+					<section>
+<h5>Perfecto image</h5>
+					</section>
+					<section>
+						<h3>We're done right? Right!?</h3>
+
+<h5>Uhh no image</h5>
+					</section>
+					<section>
+						<h3>What's wrong?</h3>
+						<h5>Some things we would want to handle</h5>
+						<ul>
+							<li class="fragment">Changes to the data</li>
+							<li class="fragment">Window size changes</li>
+							<li class="fragment">Selections in the chart</li>
+							<li class="fragment">Hard coded D3 selection refs</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Mashup source code</h3>
+<h5>Update link below</h5>
+						<h5><a href="">source</a></h5>
 					</section>
 				</section>
 				<section>
