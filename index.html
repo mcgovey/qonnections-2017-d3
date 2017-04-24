@@ -24,21 +24,18 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h2>Please note this is still very much a work in progress.  I am submitting this copy to show directionally the areas I plan to cover</h2>
-				</section>
                 <section>
-                    <h2>Unlocking the Potential of D3.js with Qlik Sense APIs</h2>
-                    <h5>Kevin McGovern</h5>
-                    <blockquote>How using one of the web's most popular JavaScript libraries can help you build things that aren't a bar chart.</blockquote>
+                    <h3>Unlocking the Potential of D3.js with Qlik Sense APIs</h3>
+                    <blockquote>Using a popular JavaScript library to build things beyond the Qlik Sense out-of-box capabilities</blockquote>
+                    <!-- <img data-src="img/d3image.png"> -->
                 </section>
                 <section>
                     <section>
-						<h2>Who am I</h2>
-						<h5>Kevin McGovern</h5>
+						<h4>Who am I? Kevin McGovern</h4>
 						<img data-src="img/honeymoon-me2.jpg">
                     </section>
                     <section>
+						<h4>Kevin McGovern</h4>
                         <ul>
                             <li class="fragment">Data Visualization Consultant at Slalom</li>
                             <li class="fragment">Qlik Branch Contributor</li>
@@ -82,6 +79,9 @@
 					<section>
 						<img data-src="img/confusing.jpg">
 					</section>
+					<section>
+						<img data-src="img/patience.png">
+					</section>
                 </section>
 				<section>
 					<section>
@@ -91,7 +91,7 @@
 						<img class="fragment" data-src="img/javascript.jpg">
 					</section>
 					<section>
-						<h3>"A JavaScript Library"</h3>
+						<h3>D3: "A JavaScript Library"</h3>
 						<h5 class="fragment">What is JavaScript?</h5>
 						<ul>
 							<li class="fragment">HTML sets document structure</li>
@@ -100,8 +100,8 @@
 						</ul>
 					</section>
 					<section>
-						<h3>"A JavaScript Library"</h3>
-						<h5 class="fragment">What is a js library?</h5>
+						<h3>D3: "A JavaScript Library"</h3>
+						<h5>What is a js library?</h5>
 						<h5 class="fragment">Extending what native js can do, makes developers lives easier</h5>
                         <ul>
 							<span class="fragment">
@@ -124,7 +124,7 @@
                         </ul>
 					</section>
 					<section>
-						<h4>"manipulating documents based on data"</h4>
+						<h4>D3: "manipulating documents based on data"</h4>
 						<h5 class="fragment">Browser renders HTML, CSS, JS to create Document Object Model</h5>
 						<span class="fragment">
 							<h5>...or DOM</h5>
@@ -295,16 +295,11 @@
 				</section>
 				<section>
 					<section>
-						<h3>Why are we talking about this at Qonnections?</h3>
-						<img data-src="img/qonnections.jpg">
-						<h5>Other than to show off appropriate gif/memes</h5>
-					</section>
-					<section>
-						<h3>Dynamic data manipulation is really useful for data visualization</h3>
+						<h2>Cool chart but why do I care?</h2>
 						<img data-src="img/d3-stream.png">
 					</section>
 					<section>
-						<h3>But why?</h3>
+						<h3>Dynamic data manipulation is really useful for data visualization</h3>
 						<ul>
 							<li class="fragment">Data changes over time</li>
 							<li class="fragment">User interactions</li>
@@ -324,6 +319,9 @@
 						</ul>
 					</section>
 					<section>
+						<img data-src="img/excelforweb.jpg">
+					</section>
+					<section>
 						<h3>D3 is more than a way to just change data on the page dynamically</h3>
 						<ul>
 							<li class="fragment">Create interactive charts</li>
@@ -335,49 +333,6 @@
 						</ul>
 					</section>
 
-				</section>
-				<section>
-					<section>
-						<h3>Benefits of Using D3 with Qlik Sense</h3>
-						<h5>Specifically how does D3 integrate with Qlik Sense</h5>
-					</section>
-
-					<section>
-						<h3>A couple different reasons</h3>
-						<span class="fragment">
-							<h5>Mashups</h5>
-							<ul>
-								<li>Blend styles with the rest of your page</li>
-								<li>Stand on the shoulders of other developers</li>
-							</ul>
-						</span>
-						<span class="fragment">
-							<h5>Extensions</h5>
-							<ul>
-								<li>Extend the capabilities of Qlik Sense</li>
-								<li>Get an appreciation for bar charts</li>
-							</ul>
-						</span>
-					</section>
-					<section>
-						<h3>Ok Qlik Sense needs D3 but why does D3 benefit from Qlik Sense?</h3>
-						<ul>
-							<li class="fragment">Meta data
-							<ul>
-								<li class="fragment">Min and Max</li>
-								<li class="fragment">Glyph counts</li>
-								<li class="fragment">Aggregations in D3 are a pain</li>
-								<li class="fragment">Limits and methods on number of rows</li>
-								<li class="fragment">Sorting and formatting</li>
-							</ul>
-							</li>
-						</ul>
-						<h5 class="fragment"><a href="https://branch-blog.qlik.com/qlik-d3-2d443ba602de">Branch blog post</a></h5>
-					</section>
-					<section>
-						<h3>Alright, let's integrate in Qlik Sense</h3>
-						<img class="fragment" data-src="img/patience.png">
-					</section>
 
 					<section>
 						<h3>D3 in the wild</h3>
@@ -422,13 +377,61 @@
 				</section>
 				<section>
 					<section>
+						<h3>Why are we talking about this at Qonnections?</h3>
+						<img data-src="img/qonnections.jpg">
+						<h5>Other than to show off appropriate gif/memes</h5>
+					</section>
+					<section>
+						<h3>Benefits of Using D3 with Qlik Sense</h3>
+						<h5>Specifically how does D3 integrate with Qlik Sense</h5>
+					</section>
+
+					<section>
+						<h3>A couple different reasons</h3>
+						<span class="fragment">
+							<h5>Mashups</h5>
+							<ul>
+								<li>Blend styles with the rest of your page</li>
+								<li>Stand on the shoulders of other developers</li>
+							</ul>
+						</span>
+						<span class="fragment">
+							<h5>Extensions</h5>
+							<ul>
+								<li>Extend the capabilities of Qlik Sense</li>
+								<li>Get an appreciation for bar charts</li>
+							</ul>
+						</span>
+					</section>
+					<section>
+						<h3>Ok Qlik Sense needs D3 but why does D3 benefit from Qlik Sense?</h3>
+						<ul>
+							<li class="fragment">Meta data
+							<ul>
+								<li class="fragment">Min and Max</li>
+								<li class="fragment">Glyph counts</li>
+								<li class="fragment">Aggregations in D3 are a pain</li>
+								<li class="fragment">Limits and methods on number of rows</li>
+								<li class="fragment">Sorting and formatting</li>
+							</ul>
+							</li>
+						</ul>
+						<h5 class="fragment"><a href="https://branch-blog.qlik.com/qlik-d3-2d443ba602de">Branch blog post</a></h5>
+					</section>
+					<section>
+						<h3>Alright, let's integrate in Qlik Sense</h3>
+						<img data-src="img/gotime.jpg">
+					</section>
+				</section>
+				<section>
+					<section>
 						<h3>Using D3 in Mashups</h3>
 						<h5>or how to use the capabilities APIs with D3.js</h5>
 						<img class="fragment" data-src="img/animal.gif">
 					</section>
 					<section>
 						<h3>What are we building?</h3>
-<h5>Needs SS</h5>
+						<img class="fragment" data-src="img/mashup-ss/finalss.png">
 					</section>
 					<section>
 						<h3>Create a new mashup</h3>
@@ -444,7 +447,7 @@
 					</section>
 					<section>
 						<h3>Add a hypercube</h3>
-						<img data-src="img/mashup-ss/wut.png">
+						<img class="fragment" data-src="img/mashup-ss/wut.png">
 					</section>
 					<section>
 						<h3>What in tarnation is a hypercube</h3>
@@ -468,7 +471,7 @@
 						<video data-autoplay data-src="img/mashup-ss/tommyBoy.mp4"></video>
 					</section>
 					<section>
-						<h3>What did we create?</h3>
+						<h3>What did all that do?</h3>
 						<img data-src="img/mashup-ss/6hypercubeConfig.png">
 					</section>
 					<section>
@@ -482,7 +485,6 @@
 					</section>
 
 					<section>
-						<h3>Let's see the developer panel</h3>
 						<img data-src="img/mashup-ss/ohyeah.jpeg">
 					</section>
 
@@ -502,13 +504,22 @@
 					<section>
 						<h3>Copy D3 code into script</h3>
 						<img data-src="img/mashup-ss/12d3Code.png">
+<aside class="notes">
+	Show where D3 code came from
+</aside>
 					</section>
 					<section>
 						<h3>Alter HTML</h3>
 						<img data-src="img/mashup-ss/13HtmlAlter.png">
+<aside class="notes">
+	Show where HTML code came from
+</aside>
 					</section>
 					<section>
 						<h3>Make sure it works</h3>
+<aside class="notes">
+	Show where data file came from
+</aside>
 						<img data-src="img/mashup-ss/14tsvCreated.png">
 						<h6>Drop the data file in the directory</h6>
 					</section>
@@ -534,7 +545,7 @@
 					<section>
 						<h3>Get data from your hypercube</h3>
 						<h6>But first prep data (<a href="https://github.com/mcgovey/QlikSenseD3Utils">source</a>)</h6>
-<h5>Needs ss</h5>
+						<img data-src="img/mashup-ss/senseutils.png">
 					</section>
 					<section>
 						<h3>Minor edits</h3>
@@ -544,7 +555,9 @@
 							<li>Comment out the call to the tsv</li>
 							<li>Point the chart data to the hypercube variable</li>
 						</ul>
-<h5>Needs ss</h5>
+<aside class="notes">
+	Supporting screenshots
+</aside>
 					</section>
 					<section>
 						<h3>Modified Example - Changing the Data</h3>
@@ -603,13 +616,16 @@
 						<h3>Capabilities API</h3>
 						<h6>What else can we do?</h6>
 						<ul>
-							<li></li>
+							<li class="fragment">Make/clear selections</li>
+							<li class="fragment">Forward/Backward through Selections</li>
+							<li class="fragment">Navigate to an app page</li>
+							<li class="fragment">Alternative States</li>
 						</ul>
+						<h6><a href="http://help.qlik.com/en-US/sense-developer/3.2/Subsystems/APIs/Content/mashup-api-reference.htm">Much More</a></h6>
 					</section>
 					<section>
 						<h3>Mashup source code</h3>
-<h5>Update link below</h5>
-						<h5><a href="">source</a></h5>
+						<h5><a href="https://github.com/mcgovey/qonnections-2017-d3/tree/b9cec24a79cd44533833060fdcf886efded5a4f2">source</a></h5>
 					</section>
 				</section>
 				<section>
@@ -618,59 +634,65 @@
 						<h5>Mostly the same as mashups, a few differences</h5>
 						<ul>
 							<li class="fragment">No hypercube creation, controlled by properties</li>
-							<li class="fragment">A ton more error handling and data validation</li>
+							<li class="fragment">More error handling and data validation</li>
 							<li class="fragment">Handle data changes in a different way</li>
 						</ul>
 					</section>
 					<section>
-						<h3>How does our data look different</h3>
-<h5>Needs ss of paint return values</h5>
+						<h3>What's different?</h3>
+						<img class="fragment" data-src="img/extension-ss/extensionss.png">
 					</section>
 					<section>
 						<h3>How does our data look different</h3>
-<h5>Needs ss of paint return values</h5>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h3>On to the real-world Qlik Sense Example</h3>
+						<li class="fragment">'Element' is roughly equal to 'App' from Mashup (different contexts)</li>
+						<li class="fragment">'Layout' is roughly equal to 'Reply' from HC</li>
+						<li class="fragment">Different data types could come in</li>
+						<li class="fragment">Varying numbers of dimensions and measures</li>
 					</section>
 					<section>
-						<h3>From bl.ocks to mashup</h3>
+						<h3>What happens when our data changes in an extension?</h3>
 						<ul>
-							<li>Create new mashup</li>
-							<li>Grab code from blocks</li>
-							<li>Add into js</li>
-							<li>Load csv as text</li>
-							<li>Check the format of data loading</li>
+							<li class="fragment">Redraw the full chart<span class="fragment"> (cop out)</span></li>
+							<li class="fragment">Use Angular to detect data changes (difficult to pull off)
+								<ul>
+									<li class="fragment">Too heavy for this but...<a class="fragment" href="https://github.com/mcgovey/qlik-sense-timebased-gantt">source</a></li>		
+								</ul>
+							</li>
 
-							<li>Getting your data ready</li>
-							<li>Capabilities API</li>
-								<li>Connect to healthcare example</li>
-								<li>The power of the community!</li>
-							<li>data coming in, feed it into the chart</li>
-							<li>Endless amount of cleanup</li>
 						</ul>
 					</section>
-				</section>
-				<section>
 					<section>
-						<h3>How does this differ with extensions</h3>
+						<h3>What about using APIs with D3 extensions?</h3>
 						<ul>
-							<li>An endless amount of configuration changes</li>
+							<li class="fragment">Extension APIs used to set extension properties
+								<ul>
+									<li class="fragment">Color picker</li>
+									<li class="fragment">SelectValues</li>
+								</ul>
+							</li>
+							<li class="fragment">Capability APIs from earlier still available</li>
+
 						</ul>
 					</section>
 					<section>
-						<h3>Things that are the same</h3>
-					</section>
-					<section>
-						<h3>Things that are different</h3>
+						<h3>So what's possible?</h3>
+						<h1 class="fragment">An example!</h1>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h3>Where can we go from here?</h3>
-						<a href=""></a>
+						<ul class="fragment">
+							<li><a href="https://d3js.org/">D3 Project Page</a></li>
+							<li><a href="http://alignedleft.com/tutorials/d3">Scott Murray Tutorial***</a></li>
+							<li><a href="https://bl.ocks.org/">Bl.ocks</a></li>
+							<li><a href="https://github.com/d3/d3/blob/master/API.md">D3 Documentation</a></li>
+							<li><a href="http://www.slideshare.net/josdirksen/learn-d3js-in-90-minutes">Sample Slideshare Presentation</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Where can we go from here?</h3>
+						<h3 class="fragment">These slides at: <a href="https://github.com/mcgovey/qonnections-2017-d3">https://github.com/mcgovey/qonnections-2017-d3</a></h3>
 					</section>
 				</section>
 			</div>
